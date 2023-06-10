@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="h-[320px] relative left-[-40px] w-[375px] overflow-hidden">
+      <div class="h-[320px] relative left-[-40px] w-[100vw] max-w-[375px] overflow-hidden">
         <img class="w-full h-full" src="./src/img/main-bg.png" alt="">
       </div>
 
@@ -128,7 +128,7 @@
         </a>
       </div>
 
-      <img src="./src/img/car-broken.png" alt="" class="mx-auto mt-[40px] max-w-[375px]">
+      <img src="./src/img/car-broken.png" alt="" class="mx-auto w-full mt-[40px] max-w-[375px]">
 
       <div class="mt-[46px] max-w-[375px] mx-auto">
         <div class="flex flex-col gap-[10px] text-center">
@@ -185,7 +185,7 @@
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
-            <div class="w-full h-[485px] rounded-[34px] bg-white py-[26px] px-[34px]">
+            <div class="w-full max-[350px]:p-[20px] h-[485px] rounded-[34px] bg-white py-[26px] px-[34px]">
               <span class="uppercase text-black text-center block text-[15px] font-bold leading-[19px]">
                 Выездная
                 <br>
@@ -291,7 +291,7 @@
           </div>
 
           <div class="swiper-slide">
-            <div class="w-full h-[485px] flex flex-col rounded-[34px] bg-white py-[26px] px-[34px]">
+            <div class="w-full max-[350px]:p-[20px] h-[485px] flex flex-col rounded-[34px] bg-white py-[26px] px-[34px]">
               <span class="uppercase text-black text-center block text-[15px] font-bold leading-[19px]">
                 Эксперт на день
               </span>
@@ -374,7 +374,7 @@
           </div>
 
           <div class="swiper-slide">
-            <div class="w-full h-[485px] flex flex-col rounded-[34px] bg-white py-[26px] px-[34px]">
+            <div class="max-[350px]:p-[20px] w-full h-[485px] flex flex-col rounded-[34px] bg-white py-[26px] px-[34px]">
               <span class="uppercase text-black text-center block text-[15px] font-bold leading-[19px]">
                 Автоподбор под ключ
               </span>
@@ -481,15 +481,16 @@
 
   <!-- Модальное окно -->
   <div id="modal" class="fixed  z-[100] inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
-    <form class="bg-white pt-[46px] px-[35px] pb-[35px] main-modal-item">
+    <form class="bg-white pt-[36px] px-[35px] pb-[35px] main-modal-item relative">
       <h2 id="modal-title" class="text-black text-[15px] leading-[19px] font-[800] uppercase text-center">Заголовок</h2>
       <div class="mt-[8px] mx-auto h-[3px] border-grad"></div>
 
       <input type="text" class="mt-[32px] w-full input" placeholder="Ваше имя">
       <input type="text" class="mt-[14px] w-full input" placeholder="Ваш номер телефона">
 
-      <button class="send-btn"></button>
-      <button id="close-modal" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Закрыть</button>
+      <button class="send-btn mt-[25px]">Отправить заявку</button>
+      <span class="mt-[8px] text-[#888888] text-[9px] block text-center">Отправьте заявку и мы Вам перезвоним!</span>
+      <div id="close-modal" class="absolute right-[14px] top-[10px] cursor-pointer text-black">✖</div>
     </form>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
