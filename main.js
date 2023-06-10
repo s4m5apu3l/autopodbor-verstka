@@ -12,13 +12,30 @@ const swiper = new Swiper(".js-swiper", {
 document.querySelectorAll('.js-open__slider-modal').forEach((btn) => {
   btn.addEventListener('click', function() {
     const modal = this.nextElementSibling;
-    modal.classList.add('show');
+    modal.classList.toggle('show');
   })
 })
 
-document.querySelectorAll('.js-open__slider-modal').forEach((btn) => {
+document.querySelectorAll('.close-modal-slider').forEach((btn) => {
   btn.addEventListener('click', function() {
-    const modal = this.nextElementSibling;
-    modal.classList.add('show');
+    const modal = this;
+    modal.classList.remove('show');
   })
 })
+
+
+document.querySelectorAll('.js-modal-open').forEach(function(button) {
+  button.addEventListener('click', function() {
+    const modal = document.querySelector('#modal');
+    const title = this.getAttribute('data-title');
+    document.querySelector('#modal-title').textContent = title;
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100', 'pointer-events-auto');
+  });
+});
+
+document.querySelector('#close-modal').addEventListener('click', function() {
+  const modal = document.querySelector('#modal');
+  modal.classList.remove('opacity-100', 'pointer-events-auto');
+  modal.classList.add('opacity-0', 'pointer-events-none');
+});

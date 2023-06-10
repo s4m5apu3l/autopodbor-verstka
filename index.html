@@ -40,7 +40,7 @@
       </div>
 
       <div class="mt-[30px] flex items-center l-gray-dots">
-        <a class="l-btn" href="javascript:void(0)">
+        <a class="l-btn js-modal-open" data-title="АВТОПОДБОР г.Якутск" href="javascript:void(0)">
           ОСТАВИТЬ ЗАЯВКУ
         </a>
       </div>
@@ -165,7 +165,7 @@
         </div>
 
         <div class="mt-[38px]">
-          <a class="l-btn" href="javascript:void(0)">
+          <a class="l-btn js-modal-open" data-title="АВТОПОДБОР г.Якутск" href="javascript:void(0)">
             ОСТАВИТЬ ЗАЯВКУ
           </a>
         </div>
@@ -234,7 +234,7 @@
               </div>
 
               <div class="">
-                <a class="l-btn__mini" href="javascript:void(0)">
+                <a class="l-btn__mini js-modal-open" data-title="Выездная проверка автомобиля" href="javascript:void(0)">
                   ОСТАВИТЬ ЗАЯВКУ
                 </a>
               </div>
@@ -246,7 +246,7 @@
                 <a class="l-btn-gray js-open__slider-modal" href="javascript:void(0)">
                   Нажмите и узнайте
                 </a>
-                <div class="modal-slider px-[28px] py-[46px] ">
+                <div class="modal-slider close-modal-slider px-[28px] py-[46px] ">
                   <div class="flex flex-col">
                     <span class="text-black font-[800] text-[14px] leading-[14px]">
                       Выездная диагностика
@@ -319,7 +319,7 @@
               </div>
 
               <div class="">
-                <a class="l-btn__mini" href="javascript:void(0)">
+                <a class="l-btn__mini js-modal-open" data-title="эксперт на день" href="javascript:void(0)">
                   ОСТАВИТЬ ЗАЯВКУ
                 </a>
               </div>
@@ -332,7 +332,7 @@
                   Нажмите и узнайте
                 </a>
 
-                <div class="modal-slider px-[28px] py-[46px] ">
+                <div class="modal-slider close-modal-slider px-[28px] py-[46px] ">
                   <div class="flex flex-col">
                     <span class="text-black font-[800] text-[14px] leading-[14px]">
                       Услуга «Эксперт на день»
@@ -414,7 +414,7 @@
               </div>
 
               <div class="">
-                <a class="l-btn__mini" href="javascript:void(0)">
+                <a class="l-btn__mini js-modal-open" data-title="автоподбор под ключ" href="javascript:void(0)">
                   ОСТАВИТЬ ЗАЯВКУ
                 </a>
               </div>
@@ -426,7 +426,7 @@
                 <a class="l-btn-gray js-open__slider-modal" href="javascript:void(0)">
                   Нажмите и узнайте
                 </a>
-                <div class="modal-slider px-[28px] py-[46px] ">
+                <div class="modal-slider close-modal-slider px-[28px] py-[46px] ">
                   <div class="flex flex-col">
                     <span class="text-black font-[800] text-[14px] leading-[14px]">
                       Услуга «Подбор под ключ»
@@ -478,6 +478,20 @@
 
 
   </main>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="fixed  z-[100] inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
+    <form class="bg-white pt-[46px] px-[35px] pb-[35px] main-modal-item">
+      <h2 id="modal-title" class="text-black text-[15px] leading-[19px] font-[800] uppercase text-center">Заголовок</h2>
+      <div class="mt-[8px] mx-auto h-[3px] border-grad"></div>
+
+      <input type="text" class="mt-[32px] w-full input" placeholder="Ваше имя">
+      <input type="text" class="mt-[14px] w-full input" placeholder="Ваш номер телефона">
+
+      <button class="send-btn"></button>
+      <button id="close-modal" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Закрыть</button>
+    </form>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./main.js"></script>
 </body>

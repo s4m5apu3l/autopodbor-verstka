@@ -296,3 +296,27 @@ body {
 .modal-slider.show {
   transform: translateY(-100%);
 }
+
+.main-modal-item {
+  background: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 23px;
+  width: 270px;
+  height: 307px;
+}
+
+.input {
+  background: #efefef;
+  border-radius: 5px;
+  padding: 12px 13px 10px 13px;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+}
+.input::placeholder {
+  color: #888888;
+}
+
+.send-btn {
+  
+}
