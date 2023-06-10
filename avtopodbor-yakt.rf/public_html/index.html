@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/inputmask@5/dist/inputmask.min.js"></script>
+
 </head>
 
 <body>
@@ -492,7 +494,8 @@
       <div class="mt-[8px] mx-auto h-[3px] border-grad"></div>
 
       <input type="text" name="name" class="mt-[32px] w-full input" placeholder="Ваше имя">
-      <input type="text" name="phone" class="mt-[14px] w-full input" placeholder="Ваш номер телефона">
+      <input type="phone" name="phone" class="mt-[14px] w-full input" placeholder="Ваш номер телефона">
+      <input type="hidden" name="formtitle" id="formtitle">
 
       <button class="send-btn mt-[25px]">Отправить заявку</button>
       <span class="mt-[8px] text-[#888888] text-[9px] block text-center">Отправьте заявку и мы Вам перезвоним!</span>

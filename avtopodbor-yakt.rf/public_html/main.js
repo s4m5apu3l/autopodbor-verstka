@@ -30,7 +30,10 @@ document.querySelectorAll('.js-modal-open').forEach(function(button) {
   button.addEventListener('click', function() {
 
     const title = this.getAttribute('data-title');
+
     document.querySelector('#modal-title').textContent = title;
+    document.querySelector('#formtitle').value = title;
+
     modal.classList.remove('opacity-0', 'pointer-events-none');
     modal.classList.add('opacity-100', 'pointer-events-auto');
   });
@@ -57,3 +60,8 @@ document.querySelector('form').addEventListener('submit', function(e) {
   }
   xhr.send(formData);
 });
+
+let phoneInput = document.querySelector('input[name="phone"]');
+let im = new Inputmask("+7 999-999-99-99");
+im.mask(phoneInput);
+

@@ -2,8 +2,10 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
     $phone = strip_tags(trim($_POST["phone"]));
+    $formtitle = strip_tags(trim($_POST["formtitle"]));
+
     $from_email = "Jucherz@bk.ru"; // адрес отправителя
-    $to_email = "asperatuz@yandex.ru";  // замените на свой адрес электронной почты
+    $to_email = "Jucherz@bk.ru";  // замените на свой адрес электронной почты
 
     if (empty($name) OR empty($phone)) {
         // Возвращаем ошибку, если имя или телефон пустые
@@ -16,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "Новая заявка от $name";
     $content = "Имя: $name\n";
     $content .= "Телефон: $phone\n";
+    $content .= "Имя заявки: $formtitle\n";
+
 
     // Настройка заголовков письма
     $headers = "From: $name <$from_email>";
